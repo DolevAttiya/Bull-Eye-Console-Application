@@ -9,6 +9,8 @@ namespace Bull_Eye.UI
    internal class Game
     {
 
+        private const string k_Quit = "Q";
+        private const string k_Restart = "restart";
         private GameLogics m_GameLogics;
         public const int k_MaxNumberCount = 4;
         private Board m_Board;
@@ -22,9 +24,6 @@ namespace Bull_Eye.UI
 
         public void Start()
         {
-            const string k_Quit = "Q";
-            const string k_Restart = "restart";
-
             m_Board.CreateBoard(m_GameLogics.ListOfGuesses);
             m_GameLogics.setRandomComputerSequence();
             string guessInputFromUser = string.Empty;

@@ -9,6 +9,7 @@ namespace Bull_Eye.Models
 {
     public class Pin
     {
+        private const string k_Quite = "Q";
         private string m_Geuss;
         private string m_Result;
 
@@ -55,7 +56,7 @@ namespace Bull_Eye.Models
 
             if (i_StringToValid.Length != GameLogics.k_MaxNumberCount)
             {
-                if (i_StringToValid.Equals("q"))
+                if (i_StringToValid.ToUpper().Equals(k_Quite))
                 {
                     o_ReturnStatus = true;
                 }

@@ -4,6 +4,8 @@ using System.Text;
 using Bull_Eye.UI;
 using Bull_Eye.Logics;
 
+// $G$ RUL-003 (-20) No submission report attached to the solution
+
 namespace Bull_Eye
 {
     public class Program

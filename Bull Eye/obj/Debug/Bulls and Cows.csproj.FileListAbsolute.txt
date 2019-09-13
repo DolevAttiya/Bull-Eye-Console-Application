@@ -1,0 +1,9 @@
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\bin\Debug\Bull Eye.exe.config
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\bin\Debug\Bull Eye.exe
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\bin\Debug\Bull Eye.pdb
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\bin\Debug\Ex02.ConsoleUtils.dll
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\obj\Debug\Bulls and Cows.csprojAssemblyReference.cache
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\obj\Debug\Bulls and Cows.csproj.CoreCompileInputs.cache
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\obj\Debug\Bulls and Cows.csproj.CopyComplete
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\obj\Debug\Bull Eye.exe
+C:\Users\dolev\Desktop\C19 Ex02 DolevAttiya 205811797 MeirAsulin 204370167\Bull Eye\obj\Debug\Bull Eye.pdb

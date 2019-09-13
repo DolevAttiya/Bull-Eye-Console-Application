@@ -13,6 +13,7 @@
         public const int k_LowestGuess = 4;
         public const int k_HighestGuess = 10;
         public const char k_StartCharRange = 'A';
+        private const string k_StartPins = "####";
         public const int k_MinRange = 0;
         public const int k_MaxRange = 7;
         public const int k_MaxNumberCount = 4;
@@ -22,8 +23,9 @@
 
         public GameLogics()
         {
+
             m_UserGeussPinList = new List<Pin>();
-            m_UserGeussPinList.Add(new Pin("####", string.Empty));
+            m_UserGeussPinList.Add(new Pin(k_StartPins, string.Empty));
         }
 
         public int MaxOfGeuss
@@ -43,6 +45,7 @@
         {
             StringBuilder randomString = new StringBuilder();
             char charTorandom = char.MinValue;
+
             randomString.Append((char)(k_StartCharRange + new Random().Next(k_MinRange, k_MaxRange)));
             for (int CharCount = 1; CharCount < k_MaxNumberCount; CharCount++)
             {
@@ -69,14 +72,14 @@
 
         public string checkBulls(string i_ComputerPin, string i_UserPin)
         {
-            char Bull = 'V';
+            const char k_Bull = 'V';
             StringBuilder o_VToprint = new StringBuilder();
 
             foreach (char vCheckChar in i_UserPin)
             {
                 if (i_ComputerPin.Contains(vCheckChar) && i_ComputerPin.IndexOf(vCheckChar) == i_UserPin.IndexOf(vCheckChar))
                 {
-                    o_VToprint.Append(Bull);
+                    o_VToprint.Append(k_Bull);
                 }
             }
 
@@ -85,14 +88,14 @@
 
         public string checkCows(string i_ComputerPin, string i_UserPin)
         {
-            char cow = 'X';
+            const char k_cow = 'X';
             StringBuilder o_XToprint = new StringBuilder();
 
             foreach (char xCheckChar in i_UserPin)
             {
                 if (i_ComputerPin.Contains(xCheckChar) && i_ComputerPin.IndexOf(xCheckChar) != i_UserPin.IndexOf(xCheckChar))
                 {
-                    o_XToprint.Append(cow);
+                    o_XToprint.Append(k_cow);
                 }
             }
 
@@ -111,8 +114,8 @@
         public bool isWin(string i_Result)
         {
             bool win = false;
-            string winstring = "VVVV";
-            if (i_Result.Equals(winstring))
+            const string k_winstring = "VVVV";
+            if (i_Result.Equals(k_winstring))
             {
                 win = true;
             }
@@ -133,10 +136,11 @@
             return hasLost;
         }
 
-        public void AddNewGuess(string i_Guess)
+        // $G$ CSS-013 (-3) Input parameters names should start with i_PascaleCase.
+        public void AddNewGuess(string i_guess)
         {
-            string resultOfUserGuess = getResultOnGuess(m_ComputerSequence, i_Guess);
-            Pin currentGeussFromUser = new Pin(i_Guess, resultOfUserGuess);
+            string resultOfUserGuess = getResultOnGuess(m_ComputerSequence, i_guess);
+            Pin currentGeussFromUser = new Pin(i_guess, resultOfUserGuess);
             m_UserGeussPinList.Add(currentGeussFromUser);
         }
 
@@ -162,7 +166,7 @@
         {
             m_UserGeussPinList.Clear();
             Ex02.ConsoleUtils.Screen.Clear();
-            m_UserGeussPinList.Add(new Pin("####", string.Empty));
+            m_UserGeussPinList.Add(new Pin(k_StartPins, string.Empty));
             setRandomComputerSequence();
         }
     }
